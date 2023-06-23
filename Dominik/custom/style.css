@@ -1,0 +1,131 @@
+/* Header */
+    #header-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150px; 
+        background-size: cover;
+        background-position: center;
+    }
+
+
+/* Headings and body */
+    h1 {
+        font-size: 20px !important;
+        font-weight: 100 !important;
+        color: #b6b697;
+        padding-top: 30px;
+        padding-bottom: 20px;    
+    }
+
+    h2 {
+        font-size: 21px !important;
+        font-weight: 100 !important;
+        color: #868672;
+        padding-top: 30px;
+        padding-bottom: 20px;
+     text-align: center;     
+    }
+
+    h3 {
+        font-size: 22px !important;
+        font-weight: 100 !important;
+        color: #868672;
+        padding-top: 30px;
+        padding-bottom: 20px;   
+        text-align: center;  
+    }
+
+    body {
+        background-color: #ffffff !important;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        padding-top: 160px; 
+
+    }
+
+    .container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+/* Navbar */
+    .navbar-fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 9999; 
+
+    }
+
+    .navbar {
+        background-color: #f7f7ef !important;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .navbar-item {
+    margin-right: 15px;
+    }
+
+    .navbar-text {
+    display: none;
+    }
+
+    @media (min-width: 992px) {
+    .navbar-text {
+        display: inline-block;
+    }
+    }
+
+
+
+/* responsive design for small screens */
+    @media (max-width: 576px) {
+    #main-img {
+        height: 200px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    }
+
+
+/* forms */
+    .form-check-label {
+    color: #222222 
+    }
+
+    .form-group{
+    color: #7bb8b1
+    }
+
+    label span {
+    color: #222222;
+    }
+
+    .form-control:focus {
+    border-color: #c4d7d4;
+    box-shadow: 0 0 0 0.2rem rgba(196,215,212, 0.5);
+    }
+
+
+
+/* buttons */
+    .btn-outline-secondary {
+        color: #9ccac5 !important;
+        border-color: #9ccac5!important;
+    }
+            
+    .btn-outline-secondary:hover {
+        background-color: #dce7e5 !important;
+    }
+    
