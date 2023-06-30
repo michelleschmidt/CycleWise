@@ -1,0 +1,8 @@
+version: '3'
+services:
+  image: php:apache
+  volumes:
+  - "./:/var/www/html"
+  ports:
+   - 3306:33060
+   - 443:443
