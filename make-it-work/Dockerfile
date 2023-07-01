@@ -1,7 +1,3 @@
-FROM openjdk:17-alpine
-WORKDIR /make-it-work
-COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
-ENV Port 3306
-EXPOSE 3306
+FROM openjdk:17
+ADD target/make-it-work.jar make-it-work.jar
+ENTRYPOINT ["java", ".jar", "/make-it-work.jar"]
