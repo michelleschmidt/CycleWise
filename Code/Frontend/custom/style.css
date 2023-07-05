@@ -128,4 +128,28 @@
     .btn-outline-secondary:hover {
         background-color: #dce7e5 !important;
     }
-    
+
+.likert-scale {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .likert-scale label {
+      display: inline-block;
+      text-align: center;
+      width: 80px;
+    }
+    .likert-scale input[type="radio"] {
+      display: none;
+    }
+    .likert-scale input[type="radio"] + label {
+      cursor: pointer;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    .likert-scale input[type="radio"]:checked + label {
+      background-color: #2196f3;
+      color: #fff;
+    }
