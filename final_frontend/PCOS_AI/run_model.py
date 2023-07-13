@@ -58,7 +58,8 @@ user_input_df = pd.DataFrame([user_input], columns=df.columns)
 df = pd.concat([df, user_input_df], ignore_index=True)
 
 # Load the model
-model = tf.keras.models.load_model("/PCOS_AI/model.py")
+model = tf.keras.models.load_model("C:\\xampp\\htdocs\\final_frontend\\PCOS_AI\\model.py")
+
 
 # Create the dataset
 ds = df_to_dataset(df, shuffle=False, batch_size=batch_size)
@@ -73,6 +74,8 @@ final_labels = [categories[i] for i in range(len(categories)) if predicted_label
 # Print the predicted labels
 print("\nPredicted labels are as follows:")
 print(final_labels)
+
+
 
 
 
