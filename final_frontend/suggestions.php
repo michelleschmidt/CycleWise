@@ -1,4 +1,3 @@
-
 <!-- include header -->
 <?php
   $pageTitle = 'Profile';
@@ -21,13 +20,13 @@
     <tbody>
       <?php
         // Path to the run_model.py script
-        $runModelScript = 'PCOS_AI/run_model.py';
+        $runModelScript = 'C:\xampp\htdocs\final_frontend\PCOS_AI\run_model.py';
 
-        // Path to the CSV file
-        $csvFile = '/PCOS_AI/sample.csv';
+        // Path to the CSV file (you can provide a default file or an empty file)
+        $csvFile = 'C:\xampp\htdocs\final_frontend\PCOS_AI\empty.csv';
 
-        // User input
-        $userInput = 'User input goes here';
+        // User input (you can provide a default value or an empty string)
+        $userInput = '';
 
         // Construct the command to execute the run_model.py script with the user input and CSV file
         $command = 'python3 ' . $runModelScript . ' "' . $csvFile . '" "' . $userInput . '"';
@@ -38,16 +37,22 @@
         // Parse the output to retrieve the food recommendations
         $recommendations = json_decode($output, true);
 
-        // Iterate over the recommendations array and generate table rows
-        foreach ($recommendations as $recommendation) {
-          $item = $recommendation['item'];
-          $quantity = $recommendation['quantity'];
+        // Check if any recommendations are found
+        if (!empty($recommendations)) {
+          // Iterate over the recommendations array and generate table rows
+          foreach ($recommendations as $recommendation) {
+            $item = $recommendation['item'];
+            $quantity = $recommendation['quantity'];
 
-          echo '<tr>';
-          echo '<td>' . $item . '</td>';
-          echo '<td>' . $quantity . '</td>';
-          echo '<td><button class="btn btn-outline-secondary">Add to Cart</button></td>';
-          echo '</tr>';
+            echo '<tr>';
+            echo '<td>' . $item . '</td>';
+            echo '<td>' . $quantity . '</td>';
+            echo '<td><button class="btn btn-outline-secondary">Add to Cart</button></td>';
+            echo '</tr>';
+          }
+        } else {
+          // No recommendations found
+          echo '<tr><td colspan="3">No recommendations found</td></tr>';
         }
       ?>
     </tbody>
@@ -59,6 +64,9 @@
   $pageTitle = 'Profile';
   include_once( "templates/footer2.php" );
 ?>
+
+
+
 
 <!-- 
   <table class="table">
