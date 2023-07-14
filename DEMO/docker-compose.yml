@@ -12,7 +12,7 @@ services:
       - 8080:80
       - 443:443 # SSL Service
     command: >
-      bash -c "apt-get update && apt-get install -y libzip-dev && docker-php-ext-install mysqli pdo pdo_mysql zip && a2enmod rewrite && apache2-foreground"
+       bash -c "apt-get update && apt-get install -y libzip-dev python3 && docker-php-ext-install mysqli pdo pdo_mysql zip && a2enmod rewrite && apache2-foreground"
 
   db: 
     image: mysql:latest
